@@ -15,6 +15,7 @@ public interface TaskRepository extends JpaRepository<Task,Long> {
 
     // Optional filters for listing tasks later
     List<Task> findByStatus(TaskStatus status);
+    List<Task> findByStatusNot(TaskStatus status);
 
     List<Task> findByScheduledTimeBetween(LocalDateTime start, LocalDateTime end);
 

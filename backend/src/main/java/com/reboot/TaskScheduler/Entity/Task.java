@@ -13,7 +13,7 @@ public class Task {
 
     @Column(nullable = false)
     private String title;
-    private String descripion;
+    private String description;
     private LocalDateTime scheduledTime;
     private LocalDateTime createdAt;
 
@@ -25,10 +25,10 @@ public class Task {
     public Task() {
     }
 
-    public Task(Long id, String title, String descripion, LocalDateTime scheduledTime, LocalDateTime createdAt, TaskStatus status, boolean recurring) {
+    public Task(Long id, String title, String description, LocalDateTime scheduledTime, LocalDateTime createdAt, TaskStatus status, boolean recurring) {
         this.id = id;
         this.title = title;
-        this.descripion = descripion;
+        this.description = description;
         this.scheduledTime = scheduledTime;
         this.createdAt = createdAt;
         this.status = status;
@@ -51,12 +51,12 @@ public class Task {
         this.title = title;
     }
 
-    public String getDescripion() {
-        return descripion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescripion(String descripion) {
-        this.descripion = descripion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public LocalDateTime getScheduledTime() {
